@@ -1,0 +1,38 @@
+{
+  "name": "sistema-gestion-finanzas-personales",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@getbrevo/brevo": "^5.0.3",
+    "@supabase/ssr": "^0.10.0",
+    "@supabase/supabase-js": "^2.101.1",
+    "bootstrap": "^5.3.8",
+    "next": "^16.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zustand": "4.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.16",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "ts-jest": "^29.4.9",
+    "typescript": "^6.0.2"
+  }
+}
