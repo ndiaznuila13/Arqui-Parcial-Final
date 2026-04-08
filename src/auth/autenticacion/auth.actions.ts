@@ -1,4 +1,4 @@
-﻿'use server'
+'use server'
 
 import { cookies } from 'next/headers'
 import {
@@ -6,7 +6,7 @@ import {
   AUTH_REFRESH_TOKEN_COOKIE,
   authCookieOptions,
   createSupabaseServerAuthClient
-} from '@/src/lib/supabaseClient'
+} from '../../lib/supabaseClient'
 
 export interface AuthUser {
   id: string
@@ -105,6 +105,8 @@ export async function loginAction(formData: FormData): Promise<AuthActionResult>
   }
 }
 
+export const login = loginAction
+
 export async function requestPasswordResetAction(formData: FormData): Promise<AuthActionResult> {
   const email = String(formData.get('email') || '').trim().toLowerCase()
 
@@ -128,6 +130,31 @@ export async function requestPasswordResetAction(formData: FormData): Promise<Au
     }
   } catch (error) {
     return { success: false, message: 'Error inesperado al solicitar el restablecimiento.' }
+  }
+}
+
+export const resetPassword = requestPasswordResetAction
+
+export async function loginWithGoogle(): Promise<AuthActionResult> {
+  try {
+    const supabase = createSupabaseServerAuthClient()
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: getAuthRedirectUrl()
+      }
+    })
+
+    if (error) {
+      return { success: false, message: toSpanishAuthMessage(error.message) || 'No se pudo iniciar sesión con Google.' }
+    }
+
+    return {
+      success: true,
+      message: data.url ? `Redirigiendo a Google: ${data.url}` : 'Redirigiendo a Google para continuar con el inicio de sesión.'
+    }
+  } catch (error) {
+    return { success: false, message: 'Error inesperado al iniciar sesión con Google.' }
   }
 }
 

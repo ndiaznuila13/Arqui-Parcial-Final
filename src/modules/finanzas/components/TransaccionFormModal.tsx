@@ -1,7 +1,7 @@
 'use client'
 
 import type { ChangeEvent, FormEvent, MouseEvent } from 'react'
-import type { CarteraOption } from '@/src/modules/carteras/cartera.schema'
+import type { CarteraOption } from '../../carteras/cartera.schema'
 import type { TransaccionFormState } from '../transaccion.schema'
 
 interface TransaccionFormModalProps {

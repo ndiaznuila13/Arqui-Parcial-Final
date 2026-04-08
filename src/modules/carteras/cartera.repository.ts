@@ -1,4 +1,4 @@
-import { createBackendSupabaseClient } from '@/src/lib/supabaseClient'
+import { createBackendSupabaseClient } from '../../lib/supabaseClient'
 import type { Cartera, CreateCarteraInput, UpdateCarteraInput } from './cartera.schema'
 
 export async function findAll(userId: string): Promise<Cartera[]> {

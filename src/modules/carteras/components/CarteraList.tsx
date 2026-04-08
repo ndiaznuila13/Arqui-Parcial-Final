@@ -3,7 +3,7 @@
 import type { CarteraSummary } from '../cartera.schema'
 import { useCarteraStore } from '../hooks/useCarteraStore'
 import CarteraCard from './CarteraCard'
-import LoadingSpinner from '@/src/shared/components/LoadingSpinner'
+import LoadingSpinner from '../../../shared/components/LoadingSpinner'
 
 interface CarteraListProps {
   carteras: CarteraSummary[]

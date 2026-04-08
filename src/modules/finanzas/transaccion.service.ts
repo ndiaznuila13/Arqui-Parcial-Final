@@ -1,4 +1,4 @@
-import type { ServiceResult } from '@/src/shared/types/common'
+import type { ServiceResult } from '../../shared/types/common'
 import type {
   Transaccion,
   CreateTransaccionInput,
@@ -7,8 +7,8 @@ import type {
 import * as transaccionRepository from './transaccion.repository'
 import * as carteraRepository from '../carteras/cartera.repository'
 import * as presupuestoRepository from '../presupuestos/presupuesto.repository'
-import { sendBudgetAlert, sendHighAmountAlert } from '@/src/lib/brevo'
-import { createBackendSupabaseClient } from '@/src/lib/supabaseClient'
+import { sendBudgetAlert, sendHighAmountAlert } from '../../lib/brevo'
+import { createBackendSupabaseClient } from '../../lib/supabaseClient'
 
 export async function listar(userId: string): Promise<ServiceResult<Transaccion[]>> {
   try {

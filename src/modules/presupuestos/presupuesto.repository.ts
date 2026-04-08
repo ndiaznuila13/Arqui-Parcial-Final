@@ -1,4 +1,4 @@
-import { createBackendSupabaseClient } from '@/src/lib/supabaseClient'
+import { createBackendSupabaseClient } from '../../lib/supabaseClient'
 import type { Presupuesto, CreatePresupuestoInput, UpdatePresupuestoInput } from './presupuesto.schema'
 
 const TABLE = 'presupuestos'

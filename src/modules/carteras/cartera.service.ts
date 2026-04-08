@@ -1,4 +1,4 @@
-import type { ServiceResult } from '@/src/shared/types/common'
+import type { ServiceResult } from '../../shared/types/common'
 import type { Cartera, CreateCarteraInput, UpdateCarteraInput } from './cartera.schema'
 import * as carteraRepository from './cartera.repository'
 

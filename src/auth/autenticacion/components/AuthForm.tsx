@@ -1,6 +1,12 @@
 "use client"
 
-import type { HTMLInputAutoCompleteAttribute, HTMLInputTypeAttribute, InputHTMLAttributes } from 'react'
+import type {
+  FormHTMLAttributes,
+  HTMLInputAutoCompleteAttribute,
+  HTMLInputTypeAttribute,
+  InputHTMLAttributes,
+  ReactNode
+} from 'react'
 import { useId, useState } from 'react'
 
 type InputMode = InputHTMLAttributes<HTMLInputElement>['inputMode']
@@ -36,6 +42,18 @@ interface AuthPasswordFieldProps {
   placeholder?: string
   required?: boolean
   value: string
+}
+
+interface AuthFormProps extends FormHTMLAttributes<HTMLFormElement> {
+  children: ReactNode
+}
+
+export default function AuthForm({ children, className = 'd-grid gap-3', ...props }: AuthFormProps) {
+  return (
+    <form className={className} {...props}>
+      {children}
+    </form>
+  )
 }
 
 export function AuthAlert({ message, variant = 'danger' }: AuthAlertProps) {

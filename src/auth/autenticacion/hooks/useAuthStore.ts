@@ -1,7 +1,7 @@
 'use client'
 
 import { create } from 'zustand'
-import type { AuthenticatedUser } from '@/src/shared/types/auth'
+import type { AuthenticatedUser } from '../../../shared/types/auth'
 
 interface AuthStoreState {
   user: AuthenticatedUser | null

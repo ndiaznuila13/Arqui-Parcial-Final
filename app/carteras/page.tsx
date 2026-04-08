@@ -1,13 +1,13 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
-import AppLayout from '@/src/shared/components/AppLayout'
-import { useCarteras } from '@/src/modules/carteras/hooks/useCarteras'
-import CarteraList from '@/src/modules/carteras/components/CarteraList'
-import CarteraForm from '@/src/modules/carteras/components/CarteraForm'
-import CarteraDeleteModal from '@/src/modules/carteras/components/CarteraDeleteModal'
-import type { CarteraSummary, CreateCarteraInput} from '@/src/modules/carteras/cartera.schema'
-import { formatMoney } from '@/src/shared/types/common'
+import AppLayout from '../../src/shared/components/AppLayout'
+import { useCarteras } from '../../src/modules/carteras/hooks/useCarteras'
+import CarteraList from '../../src/modules/carteras/components/CarteraList'
+import CarteraForm from '../../src/modules/carteras/components/CarteraForm'
+import CarteraDeleteModal from '../../src/modules/carteras/components/CarteraDeleteModal'
+import type { CarteraSummary, CreateCarteraInput} from '../../src/modules/carteras/cartera.schema'
+import { formatMoney } from '../../src/shared/types/common'
 
 export default function CarterasPage() {
   const { carteras, isLoading, crear, actualizar, eliminar } = useCarteras() //Logica

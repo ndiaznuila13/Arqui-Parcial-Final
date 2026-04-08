@@ -1,10 +1,10 @@
-﻿"use client"
+"use client"
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { AuthAlert, AuthFormField, AuthPasswordField } from '@/src/auth/autenticacion/components/AuthForm'
-import AuthShell from '@/src/auth/autenticacion/components/AuthShell'
-import { registerAction } from '@/src/auth/autenticacion/auth.actions'
+import { AuthAlert, AuthFormField, AuthPasswordField } from '../../../src/auth/autenticacion/components/AuthForm'
+import AuthShell from '../../../src/auth/autenticacion/components/AuthShell'
+import { registerAction } from '../../../src/auth/autenticacion/auth.actions'
 
 export default function CrearCuenta() {
   const [name, setName] = useState<string>('')

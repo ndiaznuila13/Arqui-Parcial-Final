@@ -3,7 +3,7 @@
 import { useTransaccionStore } from '../hooks/useTransaccionStore'
 import TransaccionFila from './TransaccionFila'
 import type { Transaccion } from '../transaccion.schema'
-import LoadingSpinner from '@/src/shared/components/LoadingSpinner'
+import LoadingSpinner from '../../../shared/components/LoadingSpinner'
 
 interface TransaccionTableProps {
   transacciones: Transaccion[]

@@ -1,4 +1,4 @@
-import { createBackendSupabaseClient } from '@/src/lib/supabaseClient'
+import { createBackendSupabaseClient } from '../../lib/supabaseClient'
 import type { Transaccion, CreateTransaccionInput, UpdateTransaccionInput } from './transaccion.schema'
 
 function toTransaccion(row: any): Transaccion {

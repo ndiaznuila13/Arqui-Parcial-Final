@@ -5,8 +5,8 @@ import { revalidatePath } from 'next/cache'
 import {
   AUTH_ACCESS_TOKEN_COOKIE,
   createSupabaseServerAuthClient
-} from '@/src/lib/supabaseClient'
-import type { ServiceResult } from '@/src/shared/types/common'
+} from '../../lib/supabaseClient'
+import type { ServiceResult } from '../../shared/types/common'
 import type { Cartera, CreateCarteraInput, UpdateCarteraInput } from './cartera.schema'
 import * as carteraService from './cartera.service'
 

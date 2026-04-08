@@ -1,4 +1,4 @@
-import type { ServiceResult } from '@/src/shared/types/common'
+import type { ServiceResult } from '../../shared/types/common'
 import type {
   Presupuesto,
   CreatePresupuestoInput,

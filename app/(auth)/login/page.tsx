@@ -2,10 +2,11 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { AuthAlert, AuthFormField, AuthPasswordField } from '@/src/auth/autenticacion/components/AuthForm'
-import AuthShell from '@/src/auth/autenticacion/components/AuthShell'
-import ResetPasswordModal from '@/src/auth/autenticacion/components/ResetPasswordModal'
-import { loginAction } from '@/src/auth/autenticacion/auth.actions'
+import AuthForm from '../../../src/auth/autenticacion/components/AuthForm';
+import AuthShell from '../../../src/auth/autenticacion/components/AuthShell';
+import ResetPasswordModal from '../../../src/auth/autenticacion/components/ResetPasswordModal';
+import { login, loginWithGoogle, resetPassword } from '../../../src/auth/autenticacion/auth.actions';
+import { AuthAlert, AuthFormField, AuthPasswordField } from '../../../src/auth/autenticacion/components/AuthForm'
 
 interface ResetPasswordSuccessPayload {
   email: string
@@ -29,7 +30,7 @@ export default function LoginPage() {
     setSuccess('')
     setIsLoading(true)
     try {
-      const result = await loginAction(formData)
+      const result = await login(formData)
       if (!result.success) {
         setError(result.message || 'Correo o contraseña incorrectos.')
         return

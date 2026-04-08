@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import type { CarteraSummary } from '../cartera.schema'
-import { formatMoney } from '@/src/shared/types/common'
+import { formatMoney } from '../../../shared/types/common'
 
 interface CarteraCardProps {
   cartera: CarteraSummary

@@ -4,8 +4,8 @@ import type { ReactNode } from 'react'
 import { useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { useAuthStore } from '@/src/auth/autenticacion/hooks/useAuthStore'
-import { getCurrentUserAction, logoutAction } from '@/src/auth/autenticacion/auth.actions'
+import { useAuthStore } from '../../auth/autenticacion/hooks/useAuthStore'
+import { getCurrentUserAction, logoutAction } from '../../auth/autenticacion/auth.actions'
 
 interface AppLayoutProps {
   children: ReactNode

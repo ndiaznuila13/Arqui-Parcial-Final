@@ -2,7 +2,7 @@
 
 import type { PresupuestoSummary } from '../presupuesto.schema'
 import PresupuestoCard from './PresupuestoCard'
-import LoadingSpinner from '@/src/shared/components/LoadingSpinner'
+import LoadingSpinner from '../../../shared/components/LoadingSpinner'
 
 interface PresupuestoListProps {
   presupuestos: PresupuestoSummary[]

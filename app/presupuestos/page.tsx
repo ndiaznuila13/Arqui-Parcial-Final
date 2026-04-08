@@ -1,14 +1,14 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
-import AppLayout from '@/src/shared/components/AppLayout'
-import { usePresupuestos } from '@/src/modules/presupuestos/hooks/usePresupuestos'
-import { usePresupuestoStore } from '@/src/modules/presupuestos/hooks/usePresupuestoStore'
-import PresupuestoStats from '@/src/modules/presupuestos/components/PresupuestoStats'
-import PresupuestoList from '@/src/modules/presupuestos/components/PresupuestoList'
-import PresupuestoForm from '@/src/modules/presupuestos/components/PresupuestoForm'
-import PresupuestoDeleteModal from '@/src/modules/presupuestos/components/PresupuestoDeleteModal'
-import type { PresupuestoSummary, CreatePresupuestoInput } from '@/src/modules/presupuestos/presupuesto.schema'
+import AppLayout from '../../src/shared/components/AppLayout'
+import { usePresupuestos } from '../../src/modules/presupuestos/hooks/usePresupuestos'
+import { usePresupuestoStore } from '../../src/modules/presupuestos/hooks/usePresupuestoStore'
+import PresupuestoStats from '../../src/modules/presupuestos/components/PresupuestoStats'
+import PresupuestoList from '../../src/modules/presupuestos/components/PresupuestoList'
+import PresupuestoForm from '../../src/modules/presupuestos/components/PresupuestoForm'
+import PresupuestoDeleteModal from '../../src/modules/presupuestos/components/PresupuestoDeleteModal'
+import type { PresupuestoSummary, CreatePresupuestoInput } from '../../src/modules/presupuestos/presupuesto.schema'
 
 export default function PresupuestosPage() {
   const { presupuestos, isLoading, crear, actualizar, eliminar } = usePresupuestos()
